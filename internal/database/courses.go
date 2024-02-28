@@ -32,6 +32,9 @@ func (c *Courses) Create(name, description, categoryId string) (*Courses, error)
 }
 
 
+func NewCourses(db *sql.DB) *Courses {
+	return &Courses{db: db}
+}
 func (c *Courses) FindAll() ([]Courses, error) {
 	rows, err := c.db.Query("SELECT id, name, description, category_id FROM courses")
 

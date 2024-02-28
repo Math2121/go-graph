@@ -8,4 +8,5 @@ import "github.com/Math2121/go-graph/internal/database"
 
 type Resolver struct{
 	CategoryDb *database.Category
+	CoursesDb *database.Courses
 }
